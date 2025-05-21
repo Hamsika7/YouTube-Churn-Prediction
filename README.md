@@ -46,14 +46,16 @@ Content creators on YouTube struggle to identify early indicators of churn, whic
 ```
 /YouTube-Churn-Prediction
 ├── /data
+│   └── all_comments.csv
 │   └── final_dataset.csv
+│   └── trending_videos.csv
 ├── /models
 │   ├── best_model.pkl
 │   └── feature_names.pkl
 ├── /notebooks
 │   └── Churn_Prediction_Project.ipynb
 ├── /reports
-│   └── analysis_report.pdf
+│   └── model_performance.csv
 ├── /scripts
 │   └── app.py
 ├── requirements.txt
