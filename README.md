@@ -109,7 +109,7 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 
 ## 👥 Contributions
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome! If you'd like to contribute, please fork the repository and submit a pull request with your enhancements.
 
 ## 📞 Contact
 
