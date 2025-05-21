@@ -105,7 +105,7 @@ Content creators on YouTube struggle to identify early indicators of churn, whic
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/Hamsika7/YouTube-Churn-Prediction/blob/main/LICENSE) file for details.
 
 ## 👥 Contributions
 
