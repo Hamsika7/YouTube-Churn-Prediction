@@ -1,122 +1,126 @@
-# YouTube Churn Prediction Using Sentiment Analysis
+# YouTube Churn Prediction Dashboard
 
-## 📚 Project Overview
+## Project Purpose
 
-This project develops a YouTube Churn Prediction Dashboard that analyzes video engagement metrics and audience sentiment to predict whether a video will retain its audience or experience churn. The system uses YouTube API for data collection, VADER Sentiment Analysis to analyze comments, and Machine Learning (XGBoost) to predict churn with 91% accuracy.
+This project was developed as part of my placement preparation to demonstrate skills in API integration, sentiment analysis, data processing, and machine learning. It predicts viewer churn on YouTube videos using engagement metrics and audience sentiment.
 
-### 🎯 Problem Statement
+## Live Demo
 
-Content creators on YouTube struggle to identify early indicators of churn, which leads to a decline in audience engagement and overall channel performance. This project addresses the following challenges:
+[View the live demo](https://churn-tube.streamlit.app/)
 
-- Lack of real-time insights into audience sentiment
-- No predictive mechanism to assess future audience retention
-- Inability to identify the key drivers behind churn
+## Overview
 
-## ⚙️ Features
+The YouTube Churn Prediction Dashboard is an interactive web application built with Streamlit. It uses the YouTube Data API to collect video metrics, VADER for comment sentiment analysis, and an XGBoost model to predict whether a video will retain its audience or experience churn with 91% accuracy.
 
-- **Video Engagement Analysis**: Analyzes views, likes, and comments to identify engagement patterns
-- **Sentiment Analysis**: Uses VADER to analyze audience sentiment from comments
-- **Churn Prediction**: Implements XGBoost model to predict if a video will experience churn
-- **Interactive Dashboard**: Streamlit-based interface for real-time predictions and insights
-- **Feature Importance Analysis**: Identifies key factors influencing churn
+## Features
 
-## 🚀 Technology Stack
+- **Video Engagement Analysis:** Analyze views, likes, and comments to identify engagement patterns.
+- **Sentiment Analysis:** Evaluate audience sentiment using VADER on YouTube comments.
+- **Churn Prediction:** Predict viewer churn using an optimized XGBoost model.
+- **Interactive Dashboard:** Real-time predictions and visual insights via Streamlit.
+- **Feature Importance:** Identify key factors influencing churn.
 
-- **Backend**: Python, Streamlit
-- **Data Processing**: Pandas, NumPy
-- **API Integration**: YouTube Data API v3
-- **Sentiment Analysis**: VADER
-- **Machine Learning**: Scikit-learn, XGBoost
-- **Visualization**: Matplotlib, Seaborn
+## Technology Stack
 
-## 📈 Model Performance
+- **Backend:** Python, Streamlit
+- **Data Processing:** Pandas, NumPy
+- **API Integration:** YouTube Data API v3
+- **Sentiment Analysis:** VADER
+- **Machine Learning:** Scikit‑learn, XGBoost
+- **Visualization:** Matplotlib, Seaborn
 
-| Model | Accuracy (%) |
-|-------|--------------|
-| Logistic Regression | 85% |
-| Decision Tree | 78% |
-| Random Forest | 89% |
-| SVM | 82% |
-| Gradient Boosting | 88% |
-| KNN | 80% |
-| **XGBoost** | **91%** |
+## Model Performance
 
-## 📁 Project Structure
+| Model               | Accuracy (%) |
+| ------------------- | ------------ |
+| Logistic Regression | 85.0         |
+| Decision Tree       | 78.0         |
+| Random Forest       | 89.0         |
+| SVM                 | 82.0         |
+| Gradient Boosting   | 88.0         |
+| KNN                 | 80.0         |
+| **XGBoost**         | **91.0**     |
+
+## Project Structure
 
 ```
-/YouTube-Churn-Prediction
-├── /data
-│   └── all_comments.csv
-│   └── final_dataset.csv
+YouTube-Churn-Prediction/
+├── data/
+│   ├── all_comments.csv
+│   ├── final_dataset.csv
 │   └── trending_videos.csv
-├── /models
+├── models/
 │   ├── best_model.pkl
 │   └── feature_names.pkl
-├── /notebooks
+├── notebooks/
 │   └── Churn_Prediction_Project.ipynb
-├── /reports
+├── reports/
 │   └── model_performance.csv
-├── /scripts
+├── scripts/
 │   └── app.py
 ├── requirements.txt
 └── README.md
 ```
 
-## 🛠️ Installation & Setup
+## Installation
 
 1. Clone the repository:
-   ```
-   git clone https://github.com/YourUsername/YouTube-Churn-Prediction.git
+   ```bash
+   git clone https://github.com/Hamsika7/YouTube-Churn-Prediction.git
    cd YouTube-Churn-Prediction
    ```
-
 2. Create and activate a virtual environment:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # Windows: venv\Scripts\activate
    ```
-   python -m venv myenv
-   source myenv/bin/activate  # On Windows: myenv\Scripts\activate
-   ```
-
-3. Install required packages:
-   ```
+3. Install dependencies:
+   ```bash
    pip install -r requirements.txt
    ```
-
 4. Set up YouTube API credentials:
-   - Create a project in the [Google Developer Console](https://console.developers.google.com/)
-   - Enable the YouTube Data API v3
-   - Create API credentials and save the API key
+   - Create a project in Google Developer Console and enable YouTube Data API v3.
+   - Create an API key and save it.
+   - Create a `.env` file in the project root and add:
+     ```env
+     YOUTUBE_API_KEY=your_api_key_here
+     ```
+    
+## Usage
 
-5. Run the Streamlit application:
-   ```
+1. Run the application:
+   ```bash
    streamlit run scripts/app.py
    ```
+2. Enter a YouTube video URL in the input field.
+3. Click "Predict Churn" to view the probability, sentiment scores, and feature insights.
 
-## 💡 Key Insights & Recommendations
+## Key Insights
 
-- **High Likes-to-Views Ratio**: Videos with higher likes-to-views ratios are less likely to experience churn
-- **Negative Sentiment in Comments**: Strong indicator of potential churn
-- **Comment Engagement**: Creators who engage with comments tend to have lower churn rates
-- **Consistent Posting Schedule**: Helps maintain audience engagement and prevents churn
+- High likes-to-views ratio correlates with lower churn risk.
+- Negative comment sentiment is a strong churn indicator.
+- Active creator engagement with comments can reduce churn.
 
-## 🔮 Future Enhancements
+## Future Enhancements
 
-- Optimize API rate limiting for more efficient data collection
-- Implement user authentication for dashboard access
-- Enhance sentiment analysis with BERT or GPT models
-- Develop personalized content strategies for creators
+- Improve sentiment analysis using transformer-based models.
+- Implement user authentication for personalized dashboards.
+- Optimize API usage for higher data throughput.
+- Add scheduling and notifications for creators.
 
-## 📄 License
+## License
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/Hamsika7/YouTube-Churn-Prediction/blob/main/LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## 👥 Contributions
+## Contributions
 
-Contributions are welcome! If you'd like to contribute, please fork the repository and submit a pull request with your enhancements.
+Contributions are welcome. Please fork the repository and submit a pull request with your enhancements.
 
-## 📞 Contact
+## Contact
+**Hamsika S** - [hamsikassnn2004@gmail.com](mailto:hamsikassnn2004@gmail.com)
 
-For questions or feedback, please contact [hamsikassnn2004@gmail.com](mailto:hamsikassnn2004@gmail.com).
-
----
-
-*Note: This project is for educational purposes only and is not affiliated with YouTube or Google.*
+## Acknowledgments
+* YouTube Data API v3
+* Streamlit
+* XGBoost
+* VADER Sentiment Analysis
