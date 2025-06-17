@@ -1,0 +1,8 @@
+Model,Accuracy
+Logistic Regression,1.0
+Decision Tree,0.75
+Random Forest,0.75
+SVM,0.75
+Gradient Boosting,0.5
+KNN,0.5
+XGBoost,0.75
