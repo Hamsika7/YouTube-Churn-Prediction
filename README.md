@@ -117,7 +117,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 Contributions are welcome. Please fork the repository and submit a pull request with your enhancements.
 
 ## Contact
-**Hamsika S** - [hamsikassnn2004@gmail.com](mailto:hamsikassnn2004@gmail.com)
+**Hamsika Suresh** - [hamsikassnn2004@gmail.com](mailto:hamsikassnn2004@gmail.com)
 
 ## Acknowledgments
 * YouTube Data API v3
